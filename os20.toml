@@ -1,0 +1,9 @@
+[package]
+name = "@hvace/window-ac"
+version = "1.0.0"
+edition = "2026"
+description = "Window air conditioner. dependsOn selects published packages. hasPart is the embedded component tree."
+
+[dependencies]
+indoor = "@hvace/indoor@^1.0"
+outdoor = "@hvace/outdoor@^1.0"

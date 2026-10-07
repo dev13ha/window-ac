@@ -1,0 +1,75 @@
+# Authored interfaces for the window-ac package.
+# Torque keys are the ones the mechanical validator already compares.
+
+[[interfaces]]
+id = "outputShaft"
+package = "@hvace/window-ac"
+owner = "Compressor.Motor"
+name = "outputShaft"
+kind = "core:interface/mechanical/shaft"
+direction = "output"
+
+[interfaces.properties]
+diameter = "20 mm"
+torque-available = "50 N·m"
+
+[[interfaces]]
+id = "inputShaft"
+package = "@hvace/window-ac"
+owner = "Compressor.Crankshaft"
+name = "inputShaft"
+kind = "core:interface/mechanical/shaft"
+direction = "input"
+
+[interfaces.properties]
+diameter = "20 mm"
+torque-required = "40 N·m"
+
+[[interfaces]]
+id = "liquidPort"
+package = "@hvace/window-ac"
+owner = "Evaporator"
+name = "liquidPort"
+kind = "core:interface/fluid/liquid"
+direction = "output"
+medium = "liquid"
+
+[interfaces.properties]
+diameter = "6.35 mm"
+
+[[interfaces]]
+id = "liquidPort"
+package = "@hvace/window-ac"
+owner = "Condenser"
+name = "liquidPort"
+kind = "core:interface/fluid/liquid"
+direction = "input"
+medium = "liquid"
+
+[interfaces.properties]
+diameter = "9.52 mm"
+
+[[connections]]
+from = "Compressor.Motor.outputShaft"
+to = "Compressor.Crankshaft.inputShaft"
+relation = "core:connectedTo"
+kind = "concentric"
+required = true
+
+[[connections]]
+from = "Evaporator.liquidPort"
+to = "Condenser.liquidPort"
+relation = "core:connectedTo"
+required = true
+
+[[representations]]
+interface = "@hvace/window-ac#Compressor.Motor.interface.outputShaft"
+artifact = "components/Compressor/components/Motor/cad/solidworks/Motor.SLDASM"
+representation = "solidworks:assembly"
+native_reference = "Axis1"
+
+[[representations]]
+interface = "@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"
+artifact = "components/Compressor/components/Crankshaft/cad/solidworks/Crankshaft.SLDPRT"
+representation = "solidworks:assembly"
+native_reference = "Axis2"
