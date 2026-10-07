@@ -1,0 +1,594 @@
+format = 1
+
+[[package]]
+name = "@hvace/indoor"
+version = "1.0.1"
+source = "registry"
+repository = "https://github.com/dev13ha/hvac-indoor"
+commit = "7d294c7e35d472efecd298b41938475db1a5ba90"
+tree = "1bb2fc0db38ff56870ebec7c81fc6dc1ccedfe49"
+manifest_digest = "sha256:6a9946f369e44048b76ed047060dfd3b539e0c09d744b61b351fe1dd21e9713d"
+dependencies = []
+
+[[package.semantic_artifact]]
+name = "indoor-behavior"
+kind = "behavior"
+format = "scxml"
+relation = "core:simulates"
+target = "os20:@hvace/indoor"
+provider = "github"
+repo = "dev13ha/hvac-indoor"
+repository = "https://github.com/dev13ha/hvac-indoor.git"
+revision = "ccfc2339c36cbdbea2371e50b490f8b98c2ee4f9"
+object = "706f4256994f0712e7c1b69a18acb3fbe63ddf18"
+object_kind = "blob"
+path = "behavior/IndoorUnit.scxml"
+
+[[package.semantic_artifact]]
+name = "indoor-geometry"
+kind = "geometry"
+format = "sldprt"
+relation = "core:represents"
+target = "os20:@hvace/indoor"
+provider = "github"
+repo = "dev13ha/hvac-indoor"
+repository = "https://github.com/dev13ha/hvac-indoor.git"
+revision = "ccfc2339c36cbdbea2371e50b490f8b98c2ee4f9"
+object = "b3cc2cd04c419574a793b40b6deac4f85b6cb3d4"
+object_kind = "blob"
+path = "indoor assembly.SLDPRT"
+
+[[package.semantic_artifact]]
+name = "indoor-materials"
+kind = "materials"
+format = "toml"
+relation = "core:specifies"
+target = "os20:@hvace/indoor"
+provider = "github"
+repo = "dev13ha/hvac-indoor"
+repository = "https://github.com/dev13ha/hvac-indoor.git"
+revision = "ccfc2339c36cbdbea2371e50b490f8b98c2ee4f9"
+object = "a383331906a3506f9c623ceffa93c45e40fd883f"
+object_kind = "blob"
+path = "materials/IndoorUnit.toml"
+
+[[package.semantic_artifact]]
+name = "indoor-model"
+kind = "model"
+format = "sysml"
+relation = "core:describes"
+target = "os20:@hvace/indoor"
+provider = "github"
+repo = "dev13ha/hvac-indoor"
+repository = "https://github.com/dev13ha/hvac-indoor.git"
+revision = "ccfc2339c36cbdbea2371e50b490f8b98c2ee4f9"
+object = "a59c01adcee416cbf5b387a8b18e78b0a5b71c15"
+object_kind = "blob"
+path = "model/IndoorUnit.sysml"
+
+[[package]]
+name = "@hvace/outdoor"
+version = "1.0.1"
+source = "registry"
+repository = "https://github.com/dev13ha/hvac-outdoor"
+commit = "29c2f39001cd05938bf59d43eedde1fd0205698a"
+tree = "5d188075717fffc4240ad31f54de62d7a05c6878"
+manifest_digest = "sha256:f5fa28200203c0554676ed60ced34b45d2bfed76220907a929a76c24f855be2c"
+dependencies = [
+    "@hvace/outdoor-compressor@1.0.1",
+    "@hvace/outdoor-fan-motor@1.0.2",
+]
+
+[[package.semantic_artifact]]
+name = "unit-behavior"
+kind = "behavior"
+format = "scxml"
+relation = "core:simulates"
+target = "os20:@hvace/outdoor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor"
+repository = "https://github.com/dev13ha/hvac-outdoor.git"
+revision = "1aac57431fd0d43dfeefc618363b3514933ccd9e"
+object = "927e70e1fed61a0176db68e24bae6694cc1862e0"
+object_kind = "blob"
+path = "behavior/OutdoorUnit.scxml"
+
+[[package.semantic_artifact]]
+name = "unit-geometry"
+kind = "geometry"
+format = "step"
+relation = "core:represents"
+target = "os20:@hvace/outdoor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor"
+repository = "https://github.com/dev13ha/hvac-outdoor.git"
+revision = "1aac57431fd0d43dfeefc618363b3514933ccd9e"
+object = "3334d6145da9af9f76237ee9f10d8fff99e42d35"
+object_kind = "blob"
+path = "Unit 24K.STEP"
+
+[[package.semantic_artifact]]
+name = "unit-materials"
+kind = "materials"
+format = "toml"
+relation = "core:specifies"
+target = "os20:@hvace/outdoor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor"
+repository = "https://github.com/dev13ha/hvac-outdoor.git"
+revision = "1aac57431fd0d43dfeefc618363b3514933ccd9e"
+object = "8b76fec6d5899eece3b56c68bb2a74473d87291f"
+object_kind = "blob"
+path = "materials/OutdoorUnit.toml"
+
+[[package.semantic_artifact]]
+name = "unit-model"
+kind = "model"
+format = "sysml"
+relation = "core:describes"
+target = "os20:@hvace/outdoor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor"
+repository = "https://github.com/dev13ha/hvac-outdoor.git"
+revision = "1aac57431fd0d43dfeefc618363b3514933ccd9e"
+object = "95e65d95475b0b8a450245f932b6791b3156f0ec"
+object_kind = "blob"
+path = "model/OutdoorUnit.sysml"
+
+[[package]]
+name = "@hvace/outdoor-compressor"
+version = "1.0.1"
+source = "registry"
+repository = "https://github.com/dev13ha/hvac-outdoor-compressor"
+commit = "89bd70cebcb15a1aa38bacf4811dc41aa84380c0"
+tree = "85b11258c2b4e48e5351011af4c1348e4012f1f5"
+manifest_digest = "sha256:350e209f7cb1de7c8521d4808bbc9aaf7e2bf9ef8ccad332c366497e7bb97295"
+dependencies = []
+
+[[package.semantic_artifact]]
+name = "compressor-behavior"
+kind = "behavior"
+format = "scxml"
+relation = "core:simulates"
+target = "os20:@hvace/outdoor-compressor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-compressor"
+repository = "https://github.com/dev13ha/hvac-outdoor-compressor.git"
+revision = "dbc1aa16bd8dd0e44d67835702b486501c9f4655"
+object = "21b0ccf547f5671c1d6491c91bd8fad6f2a83a16"
+object_kind = "blob"
+path = "behavior/OutdoorCompressor.scxml"
+
+[[package.semantic_artifact]]
+name = "compressor-geometry"
+kind = "geometry"
+format = "sldprt"
+relation = "core:represents"
+target = "os20:@hvace/outdoor-compressor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-compressor"
+repository = "https://github.com/dev13ha/hvac-outdoor-compressor.git"
+revision = "dbc1aa16bd8dd0e44d67835702b486501c9f4655"
+object = "afd2523451c9fd2a9eafd87c60a4cea36bed5566"
+object_kind = "blob"
+path = "19. Compressor.SLDPRT"
+
+[[package.semantic_artifact]]
+name = "compressor-materials"
+kind = "materials"
+format = "toml"
+relation = "core:specifies"
+target = "os20:@hvace/outdoor-compressor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-compressor"
+repository = "https://github.com/dev13ha/hvac-outdoor-compressor.git"
+revision = "dbc1aa16bd8dd0e44d67835702b486501c9f4655"
+object = "427faf281dbca59c60c3932deacea8e9e033e0de"
+object_kind = "blob"
+path = "materials/OutdoorCompressor.toml"
+
+[[package.semantic_artifact]]
+name = "compressor-model"
+kind = "model"
+format = "sysml"
+relation = "core:describes"
+target = "os20:@hvace/outdoor-compressor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-compressor"
+repository = "https://github.com/dev13ha/hvac-outdoor-compressor.git"
+revision = "dbc1aa16bd8dd0e44d67835702b486501c9f4655"
+object = "e0f1ecd80e1a16011099d0e7105bc83f97790205"
+object_kind = "blob"
+path = "model/OutdoorCompressor.sysml"
+
+[[package]]
+name = "@hvace/outdoor-fan"
+version = "1.0.1"
+source = "registry"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan"
+commit = "49600f703ff6f84b07a2cd6a1b1706f52f003637"
+tree = "fc299197baba029df7939755f2f56d2d66d76794"
+manifest_digest = "sha256:2d770d1d18598aef8db5bbf8ecfce64db9e7859e342a20325e4745e011ec87e3"
+dependencies = []
+
+[[package.semantic_artifact]]
+name = "fan-behavior"
+kind = "behavior"
+format = "scxml"
+relation = "core:simulates"
+target = "os20:@hvace/outdoor-fan"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan.git"
+revision = "6c20eb28e4fd98a8f6414f37d37e41f2db7f9909"
+object = "59f4663508c57696a1cea0860454258c952b0ee8"
+object_kind = "blob"
+path = "behavior/OutdoorFan.scxml"
+
+[[package.semantic_artifact]]
+name = "fan-geometry"
+kind = "geometry"
+format = "sldprt"
+relation = "core:represents"
+target = "os20:@hvace/outdoor-fan"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan.git"
+revision = "6c20eb28e4fd98a8f6414f37d37e41f2db7f9909"
+object = "06bae7e91d77cc9a33e4c85da893c133032b45c6"
+object_kind = "blob"
+path = "1. Outdoor fan.SLDPRT"
+
+[[package.semantic_artifact]]
+name = "fan-materials"
+kind = "materials"
+format = "toml"
+relation = "core:specifies"
+target = "os20:@hvace/outdoor-fan"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan.git"
+revision = "6c20eb28e4fd98a8f6414f37d37e41f2db7f9909"
+object = "c82ad18c321cdf2f1de8bd2e372ff1e895f9cb8b"
+object_kind = "blob"
+path = "materials/OutdoorFan.toml"
+
+[[package.semantic_artifact]]
+name = "fan-model"
+kind = "model"
+format = "sysml"
+relation = "core:describes"
+target = "os20:@hvace/outdoor-fan"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan.git"
+revision = "6c20eb28e4fd98a8f6414f37d37e41f2db7f9909"
+object = "92b93241e753a65cce418274446b82fefd7aa855"
+object_kind = "blob"
+path = "model/OutdoorFan.sysml"
+
+[[package]]
+name = "@hvace/outdoor-fan-motor"
+version = "1.0.2"
+source = "registry"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan-motor"
+commit = "460ce3aead7604f6869c2598315bdbff71adbd51"
+tree = "b8c5a3e86cf6d5ce80d5eb777aef9a6a17e3ed77"
+manifest_digest = "sha256:9d2644742e1e385188ec6bdea28aae88d54a67bbfab451ed7fbe8e0b96d90d86"
+dependencies = ["@hvace/outdoor-fan@1.0.1"]
+
+[[package.semantic_artifact]]
+name = "motor-behavior"
+kind = "behavior"
+format = "scxml"
+relation = "core:simulates"
+target = "os20:@hvace/outdoor-fan-motor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan-motor"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan-motor.git"
+revision = "04414727e39999a3a470d3a300e4632a26a0e736"
+object = "4edaeb0c1caec197c567ada612a0d3db5462e168"
+object_kind = "blob"
+path = "behavior/OutdoorFanMotor.scxml"
+
+[[package.semantic_artifact]]
+name = "motor-geometry"
+kind = "geometry"
+format = "sldprt"
+relation = "core:represents"
+target = "os20:@hvace/outdoor-fan-motor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan-motor"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan-motor.git"
+revision = "04414727e39999a3a470d3a300e4632a26a0e736"
+object = "8839bc8904512528274cae15cefcb61df13e8362"
+object_kind = "blob"
+path = "20. Fan motor.SLDPRT"
+
+[[package.semantic_artifact]]
+name = "motor-materials"
+kind = "materials"
+format = "toml"
+relation = "core:specifies"
+target = "os20:@hvace/outdoor-fan-motor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan-motor"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan-motor.git"
+revision = "04414727e39999a3a470d3a300e4632a26a0e736"
+object = "6dd2e9a305773b90b16c7fd65e000157e7b6e675"
+object_kind = "blob"
+path = "materials/OutdoorFanMotor.toml"
+
+[[package.semantic_artifact]]
+name = "motor-model"
+kind = "model"
+format = "sysml"
+relation = "core:describes"
+target = "os20:@hvace/outdoor-fan-motor"
+provider = "github"
+repo = "dev13ha/hvac-outdoor-fan-motor"
+repository = "https://github.com/dev13ha/hvac-outdoor-fan-motor.git"
+revision = "04414727e39999a3a470d3a300e4632a26a0e736"
+object = "48fd5cf458f8d68927b5259255e0f970fc8b6b89"
+object_kind = "blob"
+path = "model/OutdoorFanMotor.sysml"
+
+[[composition]]
+owner = "@hvace/window-ac#Compressor"
+concept = "core:geometry/assembly"
+representation = "solidworks:assembly"
+root = "components/Compressor/cad/solidworks/Compressor.SLDASM"
+inputs = ["@hvace/window-ac#Compressor.Motor.components.Compressor.components.Motor.cad.solidworks.Motor.SLDASM"]
+composer = "solidworks:assembly@1"
+origin = "authored"
+reason = "native-tool-unavailable"
+bindings = [
+    "core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft",
+    "core:hasPart|@hvace/window-ac#Compressor.Motor.components.Compressor.components.Motor.cad.solidworks.Motor.SLDASM|component-reference|unresolved||",
+]
+connections = ["sha256:e0fc10d4bef5df17c0811024a1a651d008dbef13bbd89ae74bf54522f8f300f6|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|concentric"]
+
+[[composition]]
+owner = "@hvace/window-ac#Compressor.Motor"
+concept = "core:geometry/assembly"
+representation = "solidworks:assembly"
+root = "components/Compressor/components/Motor/cad/solidworks/Motor.SLDASM"
+composer = "solidworks:assembly@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+connections = ["sha256:e0fc10d4bef5df17c0811024a1a651d008dbef13bbd89ae74bf54522f8f300f6|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|concentric"]
+
+[[composition]]
+owner = "@hvace/window-ac#Condenser"
+concept = "core:geometry/assembly"
+representation = "solidworks:assembly"
+root = "components/Condenser/cad/solidworks/Condenser.SLDASM"
+composer = "solidworks:assembly@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+connections = ["sha256:e0fc10d4bef5df17c0811024a1a651d008dbef13bbd89ae74bf54522f8f300f6|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|concentric"]
+
+[[composition]]
+owner = "@hvace/window-ac#ControlUnit"
+concept = "core:geometry/assembly"
+representation = "solidworks:assembly"
+root = "components/ControlUnit/cad/solidworks/ControlUnit.SLDASM"
+composer = "solidworks:assembly@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+connections = ["sha256:e0fc10d4bef5df17c0811024a1a651d008dbef13bbd89ae74bf54522f8f300f6|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|concentric"]
+
+[[composition]]
+owner = "@hvace/window-ac#Evaporator"
+concept = "core:geometry/assembly"
+representation = "solidworks:assembly"
+root = "components/Evaporator/cad/solidworks/Evaporator.SLDASM"
+composer = "solidworks:assembly@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+connections = ["sha256:e0fc10d4bef5df17c0811024a1a651d008dbef13bbd89ae74bf54522f8f300f6|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|concentric"]
+
+[[composition]]
+owner = "@hvace/window-ac#Fan"
+concept = "core:geometry/assembly"
+representation = "solidworks:assembly"
+root = "components/Fan/cad/solidworks/Fan.SLDASM"
+composer = "solidworks:assembly@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+connections = ["sha256:e0fc10d4bef5df17c0811024a1a651d008dbef13bbd89ae74bf54522f8f300f6|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|concentric"]
+
+[[composition]]
+owner = "@hvace/window-ac#WindowAc"
+concept = "core:geometry/assembly"
+representation = "solidworks:assembly"
+root = "cad/solidworks/WindowAc.SLDASM"
+inputs = [
+    "@hvace/window-ac#Compressor.components.Compressor.cad.solidworks.Compressor.SLDASM",
+    "@hvace/window-ac#Condenser.components.Condenser.cad.solidworks.Condenser.SLDASM",
+    "@hvace/window-ac#ControlUnit.components.ControlUnit.cad.solidworks.ControlUnit.SLDASM",
+    "@hvace/window-ac#Evaporator.components.Evaporator.cad.solidworks.Evaporator.SLDASM",
+    "@hvace/window-ac#Fan.components.Fan.cad.solidworks.Fan.SLDASM",
+]
+composer = "solidworks:assembly@1"
+origin = "authored"
+reason = "native-tool-unavailable"
+bindings = [
+    "core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft",
+    "core:hasPart|@hvace/window-ac#Compressor.components.Compressor.cad.solidworks.Compressor.SLDASM|component-reference|unresolved||",
+    "core:hasPart|@hvace/window-ac#Condenser.components.Condenser.cad.solidworks.Condenser.SLDASM|component-reference|unresolved||",
+    "core:hasPart|@hvace/window-ac#ControlUnit.components.ControlUnit.cad.solidworks.ControlUnit.SLDASM|component-reference|unresolved||",
+    "core:hasPart|@hvace/window-ac#Evaporator.components.Evaporator.cad.solidworks.Evaporator.SLDASM|component-reference|unresolved||",
+    "core:hasPart|@hvace/window-ac#Fan.components.Fan.cad.solidworks.Fan.SLDASM|component-reference|unresolved||",
+]
+connections = ["sha256:e0fc10d4bef5df17c0811024a1a651d008dbef13bbd89ae74bf54522f8f300f6|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|concentric"]
+
+[[composition]]
+owner = "@hvace/window-ac#Compressor"
+concept = "core:geometry/assembly"
+representation = "step:ap242"
+root = "components/Compressor/cad/step/Compressor.step"
+composer = "step:ap242@1"
+origin = "authored"
+reason = "native-tool-unavailable"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+
+[[composition]]
+owner = "@hvace/window-ac#WindowAc"
+concept = "core:geometry/assembly"
+representation = "step:ap242"
+inputs = ["@hvace/window-ac#Compressor.components.Compressor.cad.step.Compressor.step"]
+composer = "step:ap242@1"
+origin = "resolved"
+reason = "native-tool-unavailable"
+bindings = [
+    "core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft",
+    "core:hasPart|@hvace/window-ac#Compressor.components.Compressor.cad.step.Compressor.step|product-occurrence|unresolved||",
+]
+
+[[composition]]
+owner = "@hvace/window-ac#Compressor"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "components/Compressor/Compressor.sysml"
+inputs = [
+    "@hvace/window-ac#Compressor.Crankshaft.components.Compressor.components.Crankshaft.Crankshaft.sysml",
+    "@hvace/window-ac#Compressor.Housing.components.Compressor.components.Housing.Housing.sysml",
+    "@hvace/window-ac#Compressor.Motor.components.Compressor.components.Motor.Motor.sysml",
+]
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = [
+    "core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft",
+    "core:hasPart|@hvace/window-ac#Compressor.Crankshaft.components.Compressor.components.Crankshaft.Crankshaft.sysml|import|not-applicable||",
+    "core:hasPart|@hvace/window-ac#Compressor.Housing.components.Compressor.components.Housing.Housing.sysml|import|not-applicable||",
+    "core:hasPart|@hvace/window-ac#Compressor.Motor.components.Compressor.components.Motor.Motor.sysml|import|not-applicable||",
+]
+
+[[composition]]
+owner = "@hvace/window-ac#Compressor.Crankshaft"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "components/Compressor/components/Crankshaft/Crankshaft.sysml"
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+
+[[composition]]
+owner = "@hvace/window-ac#Compressor.Housing"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "components/Compressor/components/Housing/Housing.sysml"
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+
+[[composition]]
+owner = "@hvace/window-ac#Compressor.Motor"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "components/Compressor/components/Motor/Motor.sysml"
+inputs = [
+    "@hvace/window-ac#Compressor.Motor.Rotor.components.Compressor.components.Motor.components.Rotor.Rotor.sysml",
+    "@hvace/window-ac#Compressor.Motor.Shaft.components.Compressor.components.Motor.components.Shaft.Shaft.sysml",
+]
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = [
+    "core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft",
+    "core:hasPart|@hvace/window-ac#Compressor.Motor.Rotor.components.Compressor.components.Motor.components.Rotor.Rotor.sysml|import|not-applicable||",
+    "core:hasPart|@hvace/window-ac#Compressor.Motor.Shaft.components.Compressor.components.Motor.components.Shaft.Shaft.sysml|import|not-applicable||",
+]
+
+[[composition]]
+owner = "@hvace/window-ac#Compressor.Motor.Rotor"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "components/Compressor/components/Motor/components/Rotor/Rotor.sysml"
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+
+[[composition]]
+owner = "@hvace/window-ac#Compressor.Motor.Shaft"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "components/Compressor/components/Motor/components/Shaft/Shaft.sysml"
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+
+[[composition]]
+owner = "@hvace/window-ac#Condenser"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "components/Condenser/Condenser.sysml"
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+
+[[composition]]
+owner = "@hvace/window-ac#ControlUnit"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "components/ControlUnit/ControlUnit.sysml"
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+
+[[composition]]
+owner = "@hvace/window-ac#Evaporator"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "components/Evaporator/Evaporator.sysml"
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+
+[[composition]]
+owner = "@hvace/window-ac#Fan"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "components/Fan/Fan.sysml"
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = ["core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft"]
+
+[[composition]]
+owner = "@hvace/window-ac#WindowAc"
+concept = "core:system/model"
+representation = "sysml:v2"
+root = "WindowAc.sysml"
+inputs = [
+    "@hvace/window-ac#Compressor.components.Compressor.Compressor.sysml",
+    "@hvace/window-ac#Condenser.components.Condenser.Condenser.sysml",
+    "@hvace/window-ac#ControlUnit.components.ControlUnit.ControlUnit.sysml",
+    "@hvace/window-ac#Evaporator.components.Evaporator.Evaporator.sysml",
+    "@hvace/window-ac#Fan.components.Fan.Fan.sysml",
+]
+composer = "sysml:v2@1"
+origin = "authored"
+reason = "authored-root-preserved"
+bindings = [
+    "core:connectedTo|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft|interface-connection|not-applicable|@hvace/window-ac#Compressor.Motor.interface.outputShaft|@hvace/window-ac#Compressor.Crankshaft.interface.inputShaft",
+    "core:hasPart|@hvace/window-ac#Compressor.components.Compressor.Compressor.sysml|import|not-applicable||",
+    "core:hasPart|@hvace/window-ac#Condenser.components.Condenser.Condenser.sysml|import|not-applicable||",
+    "core:hasPart|@hvace/window-ac#ControlUnit.components.ControlUnit.ControlUnit.sysml|import|not-applicable||",
+    "core:hasPart|@hvace/window-ac#Evaporator.components.Evaporator.Evaporator.sysml|import|not-applicable||",
+    "core:hasPart|@hvace/window-ac#Fan.components.Fan.Fan.sysml|import|not-applicable||",
+]
